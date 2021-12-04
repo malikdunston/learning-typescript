@@ -1,12 +1,8 @@
-let app = angular.module("mainApp", []);
+declare var angular: any;
 
-class MainController{
+let app = angular.module("mainApp", [
+]);
 
-	public static $inject = ["$scope"]
-
-	constructor($scope: any){
-		$scope.message = "hello world";
-	}
-}
-
-app.controller("MainController", MainController);
+app.controller("MainController", ($scope: any) => {
+	$scope.message = "hello";
+});

@@ -1,0 +1,3 @@
+let id = 5;
+// tsc -- watch [file]
+// you can do above in tsconfig.json...

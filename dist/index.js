@@ -21,3 +21,42 @@ employee = [
     [1, "sarah"],
     [1, "jill"],
 ];
+// practice on my own...
+// let newArr: [2, 3, 5] = [2, 3, 5]; // no need to define type if doing this really....
+// newArr.push(8)// error... benefit of static typing
+// Unions
+let productId = 22;
+productId = "586";
+//Enum
+var Direction1;
+(function (Direction1) {
+    Direction1[Direction1["Up"] = 78] = "Up";
+    Direction1[Direction1["Down"] = 79] = "Down";
+    Direction1[Direction1["Left"] = 80] = "Left";
+    Direction1[Direction1["Right"] = 81] = "Right";
+})(Direction1 || (Direction1 = {}));
+// Direction1.Up = 4; // cannot assign... read-only property......
+console.log(Direction1);
+var Direction2;
+(function (Direction2) {
+    Direction2["Up"] = "up";
+    Direction2["Down"] = "down";
+    Direction2["Left"] = "left";
+    Direction2["Right"] = "right";
+})(Direction2 || (Direction2 = {}));
+console.log(Direction2);
+//Objects
+const user = {
+    id: 1,
+    name: "Cicely"
+};
+const newUser = {
+    id: 7,
+    name: "Brad",
+    faveMovies: [
+        "The Dark Knight",
+        "Eternals",
+        "Avengers"
+    ]
+};
+console.log(newUser);

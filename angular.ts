@@ -4,5 +4,9 @@ let app = angular.module("mainApp", [
 ]);
 
 app.controller("MainController", ($scope: any) => {
-	$scope.message = "hello";
+	$scope.message = "hell";
+	$scope.sampleObj = {
+		sampleVar: String
+	}
+	$scope.sampleObj.sampleVar = "this";
 });

@@ -57,6 +57,7 @@ const newUser = {
         "The Dark Knight",
         "Eternals",
         "Avengers"
-    ]
+    ],
+    auth: null
 };
 console.log(newUser);

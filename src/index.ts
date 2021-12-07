@@ -71,7 +71,8 @@ const user: {
 type User = {
 	id: number,
 	name: string,
-	faveMovies: string[]
+	faveMovies: string[],
+	auth: []
 }
 const newUser: User = {
 	id: 7,
@@ -80,6 +81,7 @@ const newUser: User = {
 		"The Dark Knight",
 		"Eternals",
 		"Avengers"
-	]
+	],
+	auth: null
 }
 console.log(newUser)

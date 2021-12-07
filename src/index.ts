@@ -82,6 +82,18 @@ const newUser: User = {
 		"Eternals",
 		"Avengers"
 	],
-	auth: null
+	auth: null // since I guess null is also an object... 
 }
 console.log(newUser)
+
+//type assertion
+let cid: any = 1;
+// let customerId = <number>cid // alternat way to do this, prefer bottom
+let customerId = cid as number;
+
+// functions
+function addNum(x: number, y: number): number{
+	return x + y // returns number bc of last assertion...
+}
+console.log(4, "78"); // error
+console.log(4, 78);

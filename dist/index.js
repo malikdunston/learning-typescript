@@ -71,3 +71,10 @@ function addNum(x, y) {
 }
 console.log(4, "78"); // error
 console.log(4, 78);
+const user1 = {
+    value: 89,
+    id: 1,
+    name: "Herbert",
+};
+user1.id = 7;
+// user1.value = 70; // error... readonly...

@@ -97,3 +97,18 @@ function addNum(x: number, y: number): number{
 }
 console.log(4, "78"); // error
 console.log(4, 78);
+
+interface UserInterface {
+	readonly value: number,
+	id: number,
+	name: string,
+	age?: number // ? = optional... (see objects above, better way to do that up there..)
+}
+const user1: UserInterface = {
+	value: 89, // cannot be changed bc readonly in interface...
+	id: 1,
+	name: "Herbert",
+}
+
+user1.id = 7;
+// user1.value = 70; // error... readonly...

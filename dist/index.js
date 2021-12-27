@@ -1,19 +1,22 @@
 let id = 5;
 // tsc -- watch [file]
 // you can do above in tsconfig.json...
-console.log("id: ", id);
+// console.log("id: ", id)
+// --------------------------------------------------------
 // basic types
 let company = "Traversy Media";
 let isPublished = true;
 let x = "hello";
 x = true; // no problem bc any type...
-let age;
+let age; // namespacing for later...
 age = 30;
 let ids = [1, 2, 3, 4, 5]; // array with only numbers....
 // ids.push("hello") // error...
 let arr = [1, true, "hello"];
+// some new practice after revisiting...
+// --------------------------------------------------------
 // Tuples
-let person = [1, "brad", true];
+let person = [1, "brad", true]; // | is or operator in typing values in ts... but the whole point of ts is kind of nullified when this is used, unless there are specific instances where you WANT to take multiple types, which is rare... edit: this is a union.
 // Tuple Array
 let employee;
 employee = [
@@ -23,10 +26,14 @@ employee = [
 ];
 // practice on my own...
 // let newArr: [2, 3, 5] = [2, 3, 5]; // no need to define type if doing this really....
-// newArr.push(8)// error... benefit of static typing
+// newArr.push(8)// error... benefit of static typing. set length for newArr
+// --------------------------------------------------------
 // Unions
+// unions used for "or" condition for a type using "|"...
 let productId = 22;
+// productId = true; // error.. not assignable... (string or number...)
 productId = "586";
+// --------------------------------------------------------
 //Enum
 var Direction1;
 (function (Direction1) {
@@ -45,6 +52,7 @@ var Direction2;
     Direction2["Right"] = "right";
 })(Direction2 || (Direction2 = {}));
 console.log(Direction2);
+// --------------------------------------------------------
 //Objects
 const user = {
     id: 1,
@@ -61,20 +69,61 @@ const newUser = {
     auth: null // since I guess null is also an object... 
 };
 console.log(newUser);
+// --------------------------------------------------------
 //type assertion
-let cid = 1;
-// let customerId = <number>cid // alternat way to do this, prefer bottom
+let cid = "5jkljlk";
+// let customerId = <number>cid // alternat way to do this, prefer below
 let customerId = cid;
+customerId = 8;
+// console.log(cid, customerId)
+// --------------------------------------------------------
 // functions
 function addNum(x, y) {
-    return x + y; // returns number bc of last assertion...
+    return (x + y).toString(); // type assertions do not convert types for you... you must still do this manually...
+    // made these changes here (return string vs number) to test type assertion
 }
-console.log(4, "78"); // error
-console.log(4, 78);
-const user1 = {
+// console.log(addNum(4, "78")); // error
+console.log(addNum(4, 78));
+// void
+function log(message) {
+    console.log(message);
+}
+function log2(message) {
+    console.log(message);
+}
+function log3(message) {
+    console.log(message);
+}
+log("hello");
+log(7);
+// log(true); // error
+log2("hello");
+log2(7);
+// log2(true); // error
+log3("hello");
+log3(7);
+const userHerbert = {
     value: 89,
     id: 1,
     name: "Herbert",
 };
-user1.id = 7;
-// user1.value = 70; // error... readonly...
+userHerbert.id = 7;
+;
+const userJosiah = {
+    value: 89,
+    id: 8907,
+    name: "Josiah",
+    newProp: 78,
+    age: 29, // still optional here bc of extension from UserInterface...
+};
+console.log(userJosiah);
+const p1 = 156;
+const add = (x, y) => x + y;
+const sub = (x, y) => x - y;
+console.log(add(5, 6), sub(27, 2));
+function printLabel(labeledObj) {
+    console.log(labeledObj.label);
+}
+let myObj = { size: 10, label: "Size 10 Object" };
+printLabel(myObj);
+printLabel(myObj);

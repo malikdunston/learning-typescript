@@ -11,5 +11,15 @@ https://www.youtube.com/watch?v=BwuLxPH8IDs
 tsc
 -	begins compilation, with tsconfig.json, if watch = true, watches files into outDir...
 
-ctrl + c
--	ends compilation batch job...
+tsc --watch [file]
+-	watches for a given js file...
+
+## Contents/Things Covered:
+-	Basic Types
+-	Tuples
+-	Unions
+-	Enumeration
+-	Objects
+-	Type Assertion
+-	Functions
+-	Interfaces
